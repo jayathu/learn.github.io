@@ -87,9 +87,9 @@ When to branch from Development
 - When your changes could affect the stability of other feature branches 
 - When you will need multiple commits to complete your work (i.e. don’t add your feature improvement or bugfix onto development, until it’s done) 
 - When working on prototypes or experimenting with something, that you do not plan to merge onto master 
+- You should only develop directly on the development branch when you are making a very low risk change that is self-contained in one commit. We do not need to be too formal about this while we are not in code freeze towards a public release, so every developer can use their judgement - but when in doubt, branch. 
 
-You should only develop directly on the development branch when you are making a very low risk change that is self-contained in one commit. We do not need to be too formal about this while we are not in code freeze towards a public release, so every developer can use their judgement - but when in doubt, branch. 
-Process for merging a feature branch back to master 
+### Process for merging a feature branch back to master 
 
 - First sync the feature branch to the tip of the development, by merging development into your feature branch. 
 -  Do a sanity check locally, check if they build well, passes all unit and integration tests 

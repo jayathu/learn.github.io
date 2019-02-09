@@ -23,3 +23,20 @@ Example of managed code would be a windows based form application that requires 
 A thread safe code is a piece of code that can be executed by two or more threads simultaneously, without tampering the shared data in a way that would cause different results for each execution. In other words, no matter how many threads simultaneously execute a thread safe code, the results of each one of those execution are exactly same.
 
 There were a several instances where I had to use threads to run a piece of code, in my game. The game runs code every update. Usually, we put all the functionalities that need to be run every frame, inside of update function. But there are some functionalities such as interpolations of positions, rotations or colors etc which could be implemented using threads, rather than making them run as part of an update function. This helps make the code more readable and manageable. Specifically, I used an engine called Unity and programmed using C#. The threads could be implemented using what they call ‘Co-routines’ : you could write a piece of function as part of a co-routine and ‘Start’ and ‘Stop’ co-routines. 
+
+## What happens when you type a URL on to the browser? (Facebook Question)
+
+When you first hit enter after typing the URL, the URL (host name) gets translated into the DNS
+
+IP Address - identifies a computer or a server in the Internet. Its simply a number of this form: w.x.y.z (each of these placeholders can be numbers from 0 - 255) - 32 bits, each of these numbers are 8 bits here. (2 pow 32 - 4BN IP addresses in total)
+IP address v6 - 2 pow 128 address in total.
+
+Your computer has to look up domain name of the IP address using the DNS Server. Your computer probably doesn’t have your own DNS server but your ISP or campus server might have it. But if you haven’t visited the url before, so that the server has no idea of what the mapping is, how do  you solve the problem? Thankfully, there are hierarchies of servers, so your ISP may know other servers that are bigger fish that has its own DNS server that might know. If none of the servers in the hierarchy know what the mapping is, there will be some server in the hierarchy that knows where to find the mapping from:  there are ‘root’ servers that knows all of the .coms, or all of the .nets etc. So your initial req can bubble up to these root servers and the mapping can bubble down to your local computer eventually. 
+
+GET / HTTP/1.0 : Once your local computer has the mapping, it sends out a message to that server (www.google.com for example) with the return address of its own IP address. 
+Your ISP has the default router that takes care of routing this packet across the globe to the actual destination. 
+
+Upon arrival of this message at the google server, Google happens to be a web server, so it looks up the message for a ‘/’ slash that indicates a file. So it grabs the corresponding file, wraps it up with the message and sends it back to the return address. The routers then take care of sending this packet across the internet to your local computer. 
+
+Your local computer gets the file in the form of html that the browser is able to render on your screen. 
+

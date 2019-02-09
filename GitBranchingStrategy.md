@@ -11,7 +11,6 @@
 * [Release branches](GitBranchingStrategy.md#release-branches)
 * [Bugfix branches](GitBranchingStrategy.md#bugfix-branches)
 * [Hotfix branches](GitBranchingStrategy.md#hotfix-branches)
-* [Naming Conventions for branching](GitBranchingStrategy.md#naming-conventions-for-branching)
 * [When to branch from Development](GitBranchingStrategy.md#when-to-branch-from-development)
 * [Process for merging a feature branch back to master](GitBranchingStrategy.md#process-for-merging-a-feature-branch-back-to-master)
 * [Deleting a branch](GitBranchingStrategy.md#deleting-a-branch)
